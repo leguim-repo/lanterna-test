@@ -9,6 +9,7 @@ import java.util.TimeZone;
 
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
+import com.googlecode.lanterna.bundle.LanternaThemes;
 import com.googlecode.lanterna.gui2.*;
 import com.googlecode.lanterna.gui2.table.Table;
 import com.googlecode.lanterna.screen.Screen;
@@ -46,6 +47,7 @@ public class TablaTest {
             }
         });
 
+
         contentPanel.addComponent(btPrueba);
 
 
@@ -82,7 +84,8 @@ public class TablaTest {
         });
 
         contentPanel.addComponent(tabla);
-
+        contentPanel.setTheme(LanternaThemes.getRegisteredTheme("conqueror"));
+        System.out.println(LanternaThemes.getRegisteredThemes().toString());
         // Create window to hold the panel
         BasicWindow window = new BasicWindow();
         window.setComponent(contentPanel);
