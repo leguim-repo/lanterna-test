@@ -17,7 +17,7 @@ public class ActionListTest {
     public static void main(String[] args) throws IOException {
         // Setup terminal and screen layers
         Terminal terminal = new DefaultTerminalFactory().createTerminal();
-        Screen screen = new TerminalScreen(terminal);
+        final Screen screen = new TerminalScreen(terminal);
         screen.startScreen();
 
 
@@ -35,6 +35,14 @@ public class ActionListTest {
             @Override
             public void run() {
                 System.out.println("Metodo crear usuario");
+                screen.clear();
+                try {
+                    screen.refresh();
+                    TablaTest a = new TablaTest();
+                    a.main(null);//chapuza
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
