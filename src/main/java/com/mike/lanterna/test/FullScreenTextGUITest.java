@@ -124,6 +124,7 @@ public class FullScreenTextGUITest {
             button14.setSize(new TerminalSize(35, 1));
             button14.setPosition(new TerminalPosition(43, 15));
 
+
             helpLabel.setPosition(new TerminalPosition(2, 22));
             helpLabel.setSize(new TerminalSize(76, 1));
             addComponent(helpLabel);
